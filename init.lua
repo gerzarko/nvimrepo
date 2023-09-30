@@ -1,3 +1,5 @@
-require("theprimagean")
+
 print("hi")
+require("theprimagean")
+
 

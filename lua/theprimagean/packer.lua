@@ -80,7 +80,6 @@ return require('packer').startup(function(use)
   use("solidjs-community/solid-snippets")
   use('junegunn/goyo.vim')
 
-
      use {
         "nvim-tree/nvim-tree.lua",
         after = "nvim-web-devicons",
@@ -95,12 +94,18 @@ return require('packer').startup(function(use)
 	run = "make install_jsregexp"
 })
 
+
+
 use {
     'numToStr/Comment.nvim',
     config = function()
         require('Comment').setup()
     end
 }
+
+
+
+
 
 
 end)

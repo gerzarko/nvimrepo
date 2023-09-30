@@ -2,4 +2,4 @@
  print("deadlyfish")
  require("theprimagean.set")
 require("theprimagean.packer")
-require("nvim-tree")
+-- require("nvim-tree")
