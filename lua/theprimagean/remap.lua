@@ -18,6 +18,7 @@ vim.keymap.set("n", "<leader>svwm", function()
     require("vim-with-me").StopVimWithMe()
 end)
 
+
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -52,6 +53,6 @@ end)
 vim.keymap.set("n", "<leader>ff","<cmd>:NvimTreeOpen<CR>")
 
 -- German remap
-
+vim.keymap.set ("n","<leader>xz","<cmd>:Telescope neoclip<CR>")
 
 

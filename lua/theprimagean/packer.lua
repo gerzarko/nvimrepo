@@ -96,6 +96,8 @@ return require('packer').startup(function(use)
 
 
 
+
+
 use {
     'numToStr/Comment.nvim',
     config = function()
@@ -103,7 +105,51 @@ use {
     end
 }
 
+use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+})
 
+
+-- use({
+--  "folke/trouble.nvim",
+--  tag = "*", 
+--  dependencies = { "nvim-tree/nvim-web-devicons" },
+--  opts = {
+--   -- your configuration comes here
+--   -- or leave it empty to use the default settings
+--   -- refer to the configuration section below
+--  },
+-- })
+--
+
+use {
+  "AckslD/nvim-neoclip.lua",
+  requires = {
+    {'kkharji/sqlite.lua', module = 'sqlite'},
+    -- you'll need at least one of these
+    {'nvim-telescope/telescope.nvim'},
+    -- {'ibhagwan/fzf-lua'},
+  },
+  config = function()
+    require('neoclip').setup()
+  end,
+}
+
+use {
+  'sudormrfbin/cheatsheet.nvim',
+
+  requires = {
+    {'nvim-telescope/telescope.nvim'},
+    {'nvim-lua/popup.nvim'},
+    {'nvim-lua/plenary.nvim'},
+  }
+}
 
 
 
