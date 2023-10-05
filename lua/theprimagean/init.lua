@@ -1,0 +1,5 @@
+ require("theprimagean.remap")
+ print("deadlyfish")
+ require("theprimagean.set")
+require("theprimagean.packer")
+-- require("nvim-tree")
