@@ -48,7 +48,6 @@ local plugins = {
   "mbbill/undotree",
   "tpope/vim-fugitive",
   "nvim-treesitter/nvim-treesitter-context",
-  
 
   {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -142,13 +141,11 @@ local plugins = {
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
 },
 
--- lazy.nvim
 {
   "folke/noice.nvim",
   event = "VeryLazy",
   opts = {
     -- add any options here
-    
   },
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
@@ -199,6 +196,7 @@ local plugins = {
   end,
 },
 
+{ "folke/neodev.nvim", opts = {} }
 
 
 
@@ -216,3 +214,8 @@ local plugins = {
  }
 
  require("lazy").setup(plugins, {})
+
+
+
+
+

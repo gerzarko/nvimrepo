@@ -53,3 +53,10 @@ vim.keymap.set("n", "<leader>ff", "<cmd>:NvimTreeOpen<CR>")
 -- German remap
 vim.keymap.set("n", "<leader>xz", "<cmd>:Telescope neoclip<CR>")
 vim.keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+vim.keymap.set("n","<leader>nn","<silent> g? <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>")
+-- You will likely want to reduce updatetime which affects CursorHold
+-- note: this setting is global and should be set only once
+vim.o.updatetime = 250
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
+
