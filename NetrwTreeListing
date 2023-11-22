@@ -1,0 +1,23 @@
+" ============================================================================
+" Netrw Directory Listing                                        (netrw v171)
+"   /Users/germanzarkovich/.config/nvim
+"   Sorted by      name
+"   Sort sequence: [\/]$,\<core\%(\.\d\+\)\=\>,\.h$,\.c$,\.cpp$,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$
+"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:special
+" ==============================================================================
+../
+nvim/
+| after/
+| | plugin/
+| | | fugitive.lua
+| | | harpoon.lua
+| | | lsp.lua
+| | | refactoring.lua
+| | | telescope.lua
+| | | treesitter.lua
+| | | trouble.lua
+| | | undotree.lua
+| | | zenmode.lua
+| lua/
+| plugin/
+| init.lua
