@@ -20,7 +20,6 @@ vim.g.mapleader = ' '
 local plugins = {
 
 
-  'wbthomason/packer.nvim',
   {
         "nvim-telescope/telescope.nvim", tag = '0.1.4' ,
 	  -- or                            , branch = '0.1.x',
@@ -36,11 +35,9 @@ local plugins = {
   },
 
   {
-			'nvim-treesitter/nvim-treesitter',
-			build= function()
-				local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-				ts_update()
-			end,},
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  } ,
 
   "nvim-treesitter/playground",
   "theprimeagen/harpoon",
@@ -159,7 +156,7 @@ local plugins = {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 10000,
+      timeout = 3500,
     },
   },
 
@@ -215,7 +212,13 @@ local plugins = {
 
  require("lazy").setup(plugins, {})
 
-
+require('nvim-treesitter.configs').setup({
+  ensure_installed = {'astro', 'tsx', 'typescript', 'html'},
+  auto_install = true,
+  highlight = {
+    enable = true
+  }
+})
 
 
 
