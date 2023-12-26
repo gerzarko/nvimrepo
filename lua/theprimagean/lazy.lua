@@ -26,13 +26,13 @@ local plugins = {
 	  dependencies= { {'nvim-lua/plenary.nvim'} }
   },
 
-  {
-	  'rose-pine/neovim',
-	  name= 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  },
+  -- {
+	 --  'rose-pine/neovim',
+	 --  name= 'rose-pine',
+	 --  config = function()
+		--   vim.cmd('colorscheme rose-pine')
+	 --  end
+  -- },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -45,6 +45,7 @@ local plugins = {
   "mbbill/undotree",
   "tpope/vim-fugitive",
   "nvim-treesitter/nvim-treesitter-context",
+  "wuelnerdotexe/vim-astro";
 
   {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -73,7 +74,6 @@ local plugins = {
   "github/copilot.vim",
   "eandrju/cellular-automaton.nvim",
   "laytan/cloak.nvim",
-
   'neovim/nvim-lspconfig',
   'jose-elias-alvarez/null-ls.nvim',
   'MunifTanjim/prettier.nvim',
@@ -85,7 +85,6 @@ local plugins = {
         after = "nvim-web-devicons",
         dependencies= "nvim-tree/nvim-web-devicons",
     },
-
    {
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.
@@ -156,7 +155,7 @@ local plugins = {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 3500,
+      timeout = 2000,
     },
   },
 
@@ -193,7 +192,14 @@ local plugins = {
   end,
 },
 
-{ "folke/neodev.nvim", opts = {} }
+{ "folke/neodev.nvim", opts = {} },
+{
+  "craftzdog/solarized-osaka.nvim",
+  lazy = false,
+  config = function()
+      vim.cmd('colorscheme solarized-osaka')
+  end
+},
 
 
 
@@ -211,14 +217,5 @@ local plugins = {
  }
 
  require("lazy").setup(plugins, {})
-
-require('nvim-treesitter.configs').setup({
-  ensure_installed = {'astro', 'tsx', 'typescript', 'html'},
-  auto_install = true,
-  highlight = {
-    enable = true
-  }
-})
-
 
 
